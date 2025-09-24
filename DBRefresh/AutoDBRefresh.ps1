@@ -109,7 +109,6 @@ function GetRITMDetails
 	
 	$BaseURL = "https://jnj-internal-production.apigee.net/apg-001-servicenow/v1/now"
 	$IRIS_APIs = Invoke-SQLCmd -query "select Misc from [AdventureWorks2016].[dbo].[Misc] where id = 1" -Server ITSUSRAWSP10439 
-	$IRIS_APIs = "NKx8Q~6pmejthqqiIrEytC5evEQlecCcbKr9Ea39"
 	if($IRIS_APIs)
 	{
 		$bodyJson = "grant_type=client_credentials&client_id=edaff30a-eb13-441a-a9ca-830bc31c165b&client_secret=$($IRIS_APIs)&resource=https%3A//ITS-APP-ISM-IRIS-Prod.jnj.com"
@@ -166,7 +165,6 @@ function GetCRDetails
 
     # Specify HTTP method
     $BaseURL = "https://jnj-internal-production.apigee.net/apg-001-servicenow/v1/now"
-    $IRIS_APIs = "NKx8Q~6pmejthqqiIrEytC5evEQlecCcbKr9Ea39"
     if($IRIS_APIs)
     {
     	$bodyJson = "grant_type=client_credentials&client_id=edaff30a-eb13-441a-a9ca-830bc31c165b&client_secret=$($IRIS_APIs)&resource=https%3A//ITS-APP-ISM-IRIS-Prod.jnj.com"
